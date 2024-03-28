@@ -1,12 +1,8 @@
 [![Python application](https://github.com/rupestre-campos/satellite-image-viewer-api/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/rupestre-campos/satellite-image-viewer-api/actions/workflows/python-app.yml)
 
-# Geospatial API
+# Satellite image viewer API
+Simple API to get a polygon and retrieve satellite images from sentinel 2
 
-One stop shop for automatized image collection
-
-
-## satellite image viewer
-Simple endpoint to get sentinel2 satellite images
 
 ## Instalation
 How to run in debian based linux distros
