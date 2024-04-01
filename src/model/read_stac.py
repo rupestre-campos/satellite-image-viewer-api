@@ -73,7 +73,7 @@ class ReadSTAC:
 
         return zip_buffer.getvalue()
 
-    def render_mosaic_from_stac(self, image_format, zip_file=False):
+    def render_mosaic_from_stac(self, image_format="PNG", zip_file=False):
         args = (self.geojson_geometry, )
         kwargs = {"assets": self.assets, "max_size": None, "nodata":0}
         if image_format not in self.formats:
@@ -97,7 +97,10 @@ class ReadSTAC:
                 assets_used
             )
             return {
-                "zip_file": zip_file
+                "image": image,
+                "bounds": image_bounds,
+                "zip_file": zip_file,
+                "name": ", ".join(sorted([item["id"] for item in assets_used]))
             }
 
         return {
